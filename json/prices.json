@@ -1,0 +1,17 @@
+[
+    {
+        "habitacion":"1",
+        "precio": "80",
+        "descripcion": "Habitacion doble"
+    },
+    {
+        "habitacion":"2",
+        "precio": "90",
+        "descripcion": "Habitacion triple"
+    },
+    {
+        "habitacion":"3",
+        "precio": "100",
+        "descripcion": "Habitacion cuadruple"
+    }
+]
