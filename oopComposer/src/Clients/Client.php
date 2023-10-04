@@ -21,4 +21,7 @@ class Client {
         $this->id = $id;
     }
 
+    public function getId() {
+        return $this->id;
+    }
 }

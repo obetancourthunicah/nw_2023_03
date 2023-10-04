@@ -50,4 +50,13 @@ class Client {
         return $row;
     }
 
+    public static function getClientByEmail($email) {
+        $conn = Conn::getConn();
+        $sqlstr = "SELECT * from clients where email = :email";
+        $prepared = $conn->prepare($sqlstr);
+        $prepared->execute([':email' => $email]);
+        $row = $prepared->fetch(\PDO::FETCH_ASSOC);
+        return $row;
+    }
+
 }

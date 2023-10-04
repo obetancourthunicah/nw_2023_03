@@ -37,4 +37,24 @@ class Room
             );
         }
     }
+
+    public static function getRooms () {
+        $conn = Conn::getConn();
+        $strsql = "SELECT * from rooms;";
+        $rows = $conn->query($strsql, \PDO::FETCH_ASSOC);
+        return $rows;
+    }
+
+    public static function getRoomById($id){
+        $conn = Conn::getConn();
+        $strsql = "SELECT * from rooms where id = :id;";
+        $prepare = $conn->prepare($strsql);
+        $prepare->execute([":id" => $id] );
+        $rows = $prepare->fetchAll(\PDO::FETCH_ASSOC);
+        if (count($rows)){
+            return $rows[0];
+        }
+        return [];
+
+    }
 }

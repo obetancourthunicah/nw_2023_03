@@ -92,4 +92,5 @@ class BookEntry {
         $rows = $prepared->fetchAll(\PDO::FETCH_ASSOC);
         return $rows;
     }
+
 }
